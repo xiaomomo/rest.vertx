@@ -596,10 +596,10 @@ public class RestRouter {
 		// write response and override headers if necessary
 		writer.write(result, request, response);
 
-		// finish if not finished by writer
-		if (!response.ended()) {
-			response.end();
-		}
+		// finish if not finished by writer @xiaomomo could not do this?
+//		if (!response.ended()) {
+//			response.end();
+//		}
 	}
 
 	public static WriterFactory getWriters() {
